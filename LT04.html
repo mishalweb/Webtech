@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Example</title>
+    <meta name="description" content="HTML form with proper structure and accessibility">
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+
+    <!-- Part A: Basic Form Structure -->
+    <form action="#" method="post">
+
+        <!-- Part C: Fieldset and Legend (Personal Information) -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <!-- Gender (Radio Buttons) -->
+            Gender:<br>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male">
+                Male
+            </label><br>
+
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                Female
+            </label><br>
+
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other">
+                Other
+            </label><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Part C: Fieldset and Legend (Academic Information) -->
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <!-- Department (Dropdown) -->
+            <label for="department">Department:</label><br>
+            <select id="department" name="department">
+                <option value="cse">CSE</option>
+                <option value="eee">EEE</option>
+                <option value="bba">BBA</option>
+                <option value="cncs">CNCS</option>
+            </select><br><br>
+
+            <!-- Skills (Checkboxes) -->
+            Skills:<br>
+            <label for="skill1">
+                <input type="checkbox" id="skill1" name="skills" value="c">
+                C
+            </label><br>
+
+            <label for="skill2">
+                <input type="checkbox" id="skill2" name="skills" value="cpp">
+                C++
+            </label><br>
+
+            <label for="skill3">
+                <input type="checkbox" id="skill3" name="skills" value="java">
+                Java
+            </label><br>
+
+            <label for="skill4">
+                <input type="checkbox" id="skill4" name="skills" value="python">
+                Python
+            </label><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Part D: Form Controls -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
+
