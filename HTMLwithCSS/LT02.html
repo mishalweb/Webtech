@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Lists, Links and Media</title>
+    <meta name="description" content="Practice HTML lists, links, images, and global attributes">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+        /* Group Selector */
+        h1, h2 {
+            text-align: center;
+            color: #154360;
+        }
+
+        /* Descendant Selector */
+        section p {
+            font-size: 1.2em; /* relative unit */
+            color: #2c3e50;
+        }
+
+        /* Attribute Selector */
+        img[title="Programming Image"] {
+            border: 5px solid #1a5276;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Page Title -->
+    <h1 id="top" title="Main Heading">HTML Content Elements Practice By Mishal</h1>
+
+    <!-- Part A: Lists -->
+    <section id="lists" class="content-section">
+        <h2>Part A: Lists</h2>
+
+        <h3>Programming Languages</h3>
+        <ul>
+            <li>C</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>JavaScript</li>
+        </ul>
+
+        <h3>Steps to Build a Website</h3>
+        <ol>
+            <li>Plan the website</li>
+            <li>Design the layout</li>
+            <li>Write HTML code</li>
+            <li>Add CSS styling</li>
+            <li>Test and deploy</li>
+        </ol>
+
+        <h3>Web Technologies</h3>
+        <dl>
+            <dt><strong>HTML</strong></dt>
+            <dd>Used to create the structure of a web page</dd>
+
+            <dt><strong>CSS</strong></dt>
+            <dd>Used to style and design web pages</dd>
+
+            <dt><strong>JavaScript</strong></dt>
+            <dd>Used to make web pages interactive</dd>
+        </dl>
+    </section>
+
+    <hr>
+
+    <!-- Part B: Links -->
+    <section id="links" class="content-section">
+        <h2>Part B: Links</h2>
+
+        <p>
+            Visit my university website:
+            <a href="https://www.aiub.edu" target="_blank" title="AIUB Website">
+                American International University-Bangladesh
+            </a>
+        </p>
+
+        <p>
+            <a href="#image-section">Go to Image Section</a>
+        </p>
+    </section>
+
+    <hr>
+
+    <!-- Part C: Images -->
+    <section id="image-section" class="content-section">
+        <h2>Part C: Image</h2>
+
+        <img 
+            src="Tech-savvy student at work.png"
+            alt="Computer programming image" 
+            width="500"
+            title="Programming Image">
+
+        <p>This is a programming image</p>
+
+    </section>
+
+    <hr>
+
+    <p>
+        <a href="#top">Back to Top</a>
+    </p>
+
+</body>
+</html>
+

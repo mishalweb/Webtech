@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Example</title>
+    <meta name="description" content="HTML form with proper structure and accessibility">
+    <link rel="stylesheet" href="LT03.css">
+
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+    <h2>Lab Task 03: CSS Box Model and Display Properties</h2>
+
+<!-- Part A: Box Model Demonstration -->
+<h3>Part A: Box Model</h3>
+<div class="box1">Box 1</div>
+<div class="box2">Box 2</div>
+<div class="box3">Box 3</div>
+
+<!-- Part B: Box Sizing -->
+<h3>Part B: Box Sizing</h3>
+<p>Border-box (includes padding and border in width/height):</p>
+<div class="box-border-box">Border-box</div>
+<p>Content-box (default, padding and border added outside width/height):</p>
+<div class="box-content-box">Content-box</div>
+
+<!-- Part C: Display Properties -->
+<h3>Part C: Display Properties</h3>
+<div class="display-block">Block Div</div>
+<span class="display-inline">Inline Span</span>
+<span class="display-inline-block">Inline-block Span</span>
+<div class="display-none">This div is hidden (display:none)</div>
+
+<!-- Part D: Visibility vs Display -->
+<h3>Part D: Visibility vs Display</h3>
+<div class="visibility-hidden">Hidden (visibility:hidden)</div>
+<div class="display-none-test">Hidden (display:none)</div>
+<p>Note: The yellow box above takes space but is invisible. The grey box above doesn't take space at all.</p>
+
+
+    <!-- Part A: Basic Form Structure -->
+    <form action="#" method="post">
+
+        <!-- Part C: Fieldset and Legend (Personal Information) -->
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label><br>
+            <input type="text" id="fullname" name="fullname"><br><br>
+
+            <!-- Email Address -->
+            <label for="email">Email Address:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+
+            <!-- Password -->
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password"><br><br>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob"><br><br>
+
+            <!-- Gender (Radio Buttons) -->
+            Gender:<br>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male">
+                Male
+            </label><br>
+
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female">
+                Female
+            </label><br>
+
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other">
+                Other
+            </label><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Part C: Fieldset and Legend (Academic Information) -->
+        <fieldset>
+            <legend>Academic Information</legend>
+
+            <!-- Department (Dropdown) -->
+            <label for="department">Department:</label><br>
+            <select id="department" name="department">
+                <option value="cse">CSE</option>
+                <option value="eee">EEE</option>
+                <option value="bba">BBA</option>
+                <option value="cncs">CNCS</option>
+            </select><br><br>
+
+            <!-- Skills (Checkboxes) -->
+            Skills:<br>
+            <label for="skill1">
+                <input type="checkbox" id="skill1" name="skills" value="c">
+                C
+            </label><br>
+
+            <label for="skill2">
+                <input type="checkbox" id="skill2" name="skills" value="cpp">
+                C++
+            </label><br>
+
+            <label for="skill3">
+                <input type="checkbox" id="skill3" name="skills" value="java">
+                Java
+            </label><br>
+
+            <label for="skill4">
+                <input type="checkbox" id="skill4" name="skills" value="python">
+                Python
+            </label><br><br>
+        </fieldset>
+
+        <br>
+
+        <!-- Part D: Form Controls -->
+        <input type="submit" value="Submit">
+        <input type="reset" value="Reset">
+
+    </form>
+
+</body>
+</html>
+

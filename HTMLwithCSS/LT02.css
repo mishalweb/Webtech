@@ -1,0 +1,46 @@
+/* Universal Selector */
+* {
+    font-family: Arial, sans-serif;
+}
+
+/* Absolute units */
+body {
+    margin: 2cm; /* absolute unit */
+    background-color: #eaf2f8;
+}
+
+/* Using px */
+h3 {
+    font-size: 22px; /* absolute */
+}
+
+/* Using rem */
+h1 {
+    font-size: 2rem; /* relative */
+}
+
+/* Using % */
+.content-section {
+    width: 80%;
+    padding: 2em; /* relative */
+    background-color: #f2f4f4;
+    margin-bottom: 30px;
+}
+
+/* Using vh */
+img {
+    max-height: 60vh;
+}
+
+/* Pseudo-classes */
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: green;
+}
+
+a:focus {
+    background-color: yellow;
+}

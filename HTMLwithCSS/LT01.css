@@ -1,0 +1,15 @@
+/* External CSS */
+
+body {
+    background-color: #f4f6f7;  /* Soft light grey */
+    text-align: center;
+}
+
+h2, h3, h4, h5, h6 {
+    color: #2471a3;   /* Calm blue */
+}
+
+hr {
+    margin: 20px 0;
+    border: 1px solid #d5dbdb;
+}
