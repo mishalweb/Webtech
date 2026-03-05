@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>AIUB Student Manager</title>
+<link rel="stylesheet" href="dom.css">
+</head>
+
+<body>
+
+<!-- Header with AIUB logo -->
+<header class="top-header">
+<img src="American_International_University-Bangladesh_Monogram.png" alt="AIUB Logo" class="logo">
+<h1>AIUB Student List</h1>
+</header>
+
+<!-- Student Form -->
+<form id="student-form">
+<input type="text" id="roll-no" placeholder="Roll No">
+<input type="text" id="student-name" placeholder="Student Name">
+<button type="submit" id="add-btn" disabled>Add Student</button>
+</form>
+
+<!-- Search + Buttons -->
+<input type="text" id="search" placeholder="Search student"><br><br>
+<button id="sort-btn">Sort A-Z</button>
+<button id="highlight-btn">Highlight First Student</button>
+
+<!-- Student List -->
+<ul id="student-list"></ul>
+
+<!-- Counters -->
+<p id="total">Total students: 0</p>
+<p id="attendance">Present: 0 | Absent: 0</p>
+
+<script src="dom.js"></script>
+
+</body>
+</html>
