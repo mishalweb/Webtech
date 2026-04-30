@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Dashboard</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            height: 100vh;
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: white;
+        }
+
+        .container {
+            text-align: center;
+            padding-top: 60px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        p {
+            color: #ccc;
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 14px 35px;
+            font-size: 16px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #ff512f, #dd2476);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+        }
+
+        #result {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px;
+            width: 260px;
+            text-align: left;
+            transition: 0.4s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.03);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+        }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #00f2fe;
+        }
+
+        .card p {
+            margin: 6px 0;
+            color: #ddd;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            background: #00f2fe;
+            color: black;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <p>Click below to load student records</p>
+
+        <button onclick="loadData()">Load Students</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function loadData() {
+            var xhr = new XMLHttpRequest();
+
+            xhr.open("GET", "data.php", true);
+
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+
+                    var data = JSON.parse(xhr.responseText);
+                    var output = "";
+
+                    for (var i = 0; i < data.length; i++) {
+                        output += `
+                            <div class="card">
+                                <h3>${data[i].name}</h3>
+                                <p><strong>ID:</strong> ${data[i].id}</p>
+                                <p><strong>Department:</strong> ${data[i].dept}</p>
+                                <span class="badge">CGPA: ${data[i].cgpa}</span>
+                            </div>
+                        `;
+                    }
+
+                    document.getElementById("result").innerHTML = output;
+                }
+            };
+
+            xhr.send();
+        }
+    </script>
+
+</body>
+</html>
